@@ -1,7 +1,10 @@
+const Cat = require('../models/cat');
+
 module.exports = {
     index 
 }
 
 function index(req, res) {
-    res.json({message: 'Getting Cats'})
+    const cats = Cat.getAll();
+    res.json(cats);
 }
