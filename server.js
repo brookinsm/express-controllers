@@ -4,6 +4,8 @@ const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
 const catsRouter = require('./routes/cats');
+const dogsRouter = require('./routes/dogs');
+
 
 
 const PORT = process.env.PORT || 3000;
@@ -20,7 +22,7 @@ app.get('/', function(req, res) {
 });
 
 app.use('/cats', catsRouter);
-
+app.use('/dogs', dogsRouter);
 
 
 
